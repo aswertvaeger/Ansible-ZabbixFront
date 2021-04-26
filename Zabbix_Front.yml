@@ -1,0 +1,7 @@
+- name: Installation FrontEnd Zabbix
+  hosts: web
+  tasks:
+  - name: apt nginx
+    apt:
+      name: nginx
+      state: present
