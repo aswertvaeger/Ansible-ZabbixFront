@@ -1,7 +1,8 @@
 - name: Installation FrontEnd Zabbix
   hosts: web
   tasks:
-  - name: apt nginx
-    apt:
-      name: nginx
-      state: present
+  - name: Download Zabbix Package
+  get_url:
+    url: https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
+    dest: /root
+    mode: 0440
